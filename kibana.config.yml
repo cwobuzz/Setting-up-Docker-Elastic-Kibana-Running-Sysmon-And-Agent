@@ -1,0 +1,15 @@
+# Default Kibana configuration for docker target
+server.name: kibana
+server.host: "0"
+elasticsearch.hosts: [ "https://es01:9200" ]
+monitoring.ui.container.elasticsearch.enabled: true
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "SL0l5TTHHwqb9H5wsf0G"
+server.ssl.enabled: true
+#server.ssl.certificate: "$CERTS_DIR/kib01/kib01.crt"
+#server.ssl.key: "$CERTS_DIR/kib01/kib01.key" 
+#elasticsearch.ssl.certificate: "$CERTS_DIR/es01/es01.crt"
+#elasticsearch.ssl.key: "$CERTS_DIR/es01/es01.key"
+#elasticsearch.ssl.certificateAuthorities: [ "$CERTS_DIR/ca/ca.crt" ]
+xpack.security.enabled: true
+xpack.encryptedSavedObjects.encryptionKey: "this-is-not-a-real-key-but-gets-the-job-done"
